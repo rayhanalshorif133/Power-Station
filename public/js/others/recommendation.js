@@ -1,0 +1,32 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./resources/js/others/recommendation.js":
+/*!***********************************************!*\
+  !*** ./resources/js/others/recommendation.js ***!
+  \***********************************************/
+/***/ (() => {
+
+eval("$(document).ready(function () {\n  note();\n  seeMore();\n  lessMore();\n});\n\nfunction note() {\n  $(\".note\").each(function () {\n    var note = $(this).text();\n\n    if (note.length > 350) {\n      $(this).text(note.substring(0, 350) + \"...\");\n      $(this).next().next().removeClass(\"d-none\");\n    }\n  });\n}\n\nfunction seeMore() {\n  $(\".seeMore\").click(function () {\n    var note = $(this).parent().find(\".note\");\n    var moreNote = $(this).parent().find(\".moreNote\");\n    note.addClass(\"d-none\");\n    moreNote.removeClass(\"d-none\"); // toggle\n\n    $(this).toggleClass(\"d-none\");\n    $(this).next().toggleClass(\"d-none\");\n  });\n}\n\nfunction lessMore() {\n  $(\".lessMore\").click(function () {\n    var note = $(this).parent().find(\".note\");\n    var moreNote = $(this).parent().find(\".moreNote\");\n    note.removeClass(\"d-none\");\n    moreNote.addClass(\"d-none\"); // toggle\n\n    $(this).toggleClass(\"d-none\");\n    $(this).prev().toggleClass(\"d-none\");\n  });\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvb3RoZXJzL3JlY29tbWVuZGF0aW9uLmpzPzQ1YTUiXSwibmFtZXMiOlsiJCIsImRvY3VtZW50IiwicmVhZHkiLCJub3RlIiwic2VlTW9yZSIsImxlc3NNb3JlIiwiZWFjaCIsInRleHQiLCJsZW5ndGgiLCJzdWJzdHJpbmciLCJuZXh0IiwicmVtb3ZlQ2xhc3MiLCJjbGljayIsInBhcmVudCIsImZpbmQiLCJtb3JlTm90ZSIsImFkZENsYXNzIiwidG9nZ2xlQ2xhc3MiLCJwcmV2Il0sIm1hcHBpbmdzIjoiQUFBQUEsQ0FBQyxDQUFDQyxRQUFELENBQUQsQ0FBWUMsS0FBWixDQUFrQixZQUFZO0FBQzFCQyxFQUFBQSxJQUFJO0FBQ0pDLEVBQUFBLE9BQU87QUFDUEMsRUFBQUEsUUFBUTtBQUNYLENBSkQ7O0FBTUEsU0FBU0YsSUFBVCxHQUFnQjtBQUNaSCxFQUFBQSxDQUFDLENBQUMsT0FBRCxDQUFELENBQVdNLElBQVgsQ0FBZ0IsWUFBWTtBQUN4QixRQUFJSCxJQUFJLEdBQUdILENBQUMsQ0FBQyxJQUFELENBQUQsQ0FBUU8sSUFBUixFQUFYOztBQUNBLFFBQUlKLElBQUksQ0FBQ0ssTUFBTCxHQUFjLEdBQWxCLEVBQXVCO0FBQ25CUixNQUFBQSxDQUFDLENBQUMsSUFBRCxDQUFELENBQVFPLElBQVIsQ0FBYUosSUFBSSxDQUFDTSxTQUFMLENBQWUsQ0FBZixFQUFrQixHQUFsQixJQUF5QixLQUF0QztBQUNBVCxNQUFBQSxDQUFDLENBQUMsSUFBRCxDQUFELENBQVFVLElBQVIsR0FBZUEsSUFBZixHQUFzQkMsV0FBdEIsQ0FBa0MsUUFBbEM7QUFDSDtBQUNKLEdBTkQ7QUFPSDs7QUFFRCxTQUFTUCxPQUFULEdBQW1CO0FBQ2ZKLEVBQUFBLENBQUMsQ0FBQyxVQUFELENBQUQsQ0FBY1ksS0FBZCxDQUFvQixZQUFZO0FBQzVCLFFBQUlULElBQUksR0FBR0gsQ0FBQyxDQUFDLElBQUQsQ0FBRCxDQUFRYSxNQUFSLEdBQWlCQyxJQUFqQixDQUFzQixPQUF0QixDQUFYO0FBQ0EsUUFBSUMsUUFBUSxHQUFHZixDQUFDLENBQUMsSUFBRCxDQUFELENBQVFhLE1BQVIsR0FBaUJDLElBQWpCLENBQXNCLFdBQXRCLENBQWY7QUFDQVgsSUFBQUEsSUFBSSxDQUFDYSxRQUFMLENBQWMsUUFBZDtBQUNBRCxJQUFBQSxRQUFRLENBQUNKLFdBQVQsQ0FBcUIsUUFBckIsRUFKNEIsQ0FNNUI7O0FBQ0FYLElBQUFBLENBQUMsQ0FBQyxJQUFELENBQUQsQ0FBUWlCLFdBQVIsQ0FBb0IsUUFBcEI7QUFDQWpCLElBQUFBLENBQUMsQ0FBQyxJQUFELENBQUQsQ0FBUVUsSUFBUixHQUFlTyxXQUFmLENBQTJCLFFBQTNCO0FBQ0gsR0FURDtBQVVIOztBQUNELFNBQVNaLFFBQVQsR0FBb0I7QUFDaEJMLEVBQUFBLENBQUMsQ0FBQyxXQUFELENBQUQsQ0FBZVksS0FBZixDQUFxQixZQUFZO0FBQzdCLFFBQUlULElBQUksR0FBR0gsQ0FBQyxDQUFDLElBQUQsQ0FBRCxDQUFRYSxNQUFSLEdBQWlCQyxJQUFqQixDQUFzQixPQUF0QixDQUFYO0FBQ0EsUUFBSUMsUUFBUSxHQUFHZixDQUFDLENBQUMsSUFBRCxDQUFELENBQVFhLE1BQVIsR0FBaUJDLElBQWpCLENBQXNCLFdBQXRCLENBQWY7QUFDQVgsSUFBQUEsSUFBSSxDQUFDUSxXQUFMLENBQWlCLFFBQWpCO0FBQ0FJLElBQUFBLFFBQVEsQ0FBQ0MsUUFBVCxDQUFrQixRQUFsQixFQUo2QixDQU03Qjs7QUFDQWhCLElBQUFBLENBQUMsQ0FBQyxJQUFELENBQUQsQ0FBUWlCLFdBQVIsQ0FBb0IsUUFBcEI7QUFDQWpCLElBQUFBLENBQUMsQ0FBQyxJQUFELENBQUQsQ0FBUWtCLElBQVIsR0FBZUQsV0FBZixDQUEyQixRQUEzQjtBQUNILEdBVEQ7QUFVSCIsInNvdXJjZXNDb250ZW50IjpbIiQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uICgpIHtcbiAgICBub3RlKCk7XG4gICAgc2VlTW9yZSgpO1xuICAgIGxlc3NNb3JlKCk7XG59KTtcblxuZnVuY3Rpb24gbm90ZSgpIHtcbiAgICAkKFwiLm5vdGVcIikuZWFjaChmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBub3RlID0gJCh0aGlzKS50ZXh0KCk7XG4gICAgICAgIGlmIChub3RlLmxlbmd0aCA+IDM1MCkge1xuICAgICAgICAgICAgJCh0aGlzKS50ZXh0KG5vdGUuc3Vic3RyaW5nKDAsIDM1MCkgKyBcIi4uLlwiKTtcbiAgICAgICAgICAgICQodGhpcykubmV4dCgpLm5leHQoKS5yZW1vdmVDbGFzcyhcImQtbm9uZVwiKTtcbiAgICAgICAgfVxuICAgIH0pO1xufVxuXG5mdW5jdGlvbiBzZWVNb3JlKCkge1xuICAgICQoXCIuc2VlTW9yZVwiKS5jbGljayhmdW5jdGlvbiAoKSB7XG4gICAgICAgIGxldCBub3RlID0gJCh0aGlzKS5wYXJlbnQoKS5maW5kKFwiLm5vdGVcIik7XG4gICAgICAgIGxldCBtb3JlTm90ZSA9ICQodGhpcykucGFyZW50KCkuZmluZChcIi5tb3JlTm90ZVwiKTtcbiAgICAgICAgbm90ZS5hZGRDbGFzcyhcImQtbm9uZVwiKTtcbiAgICAgICAgbW9yZU5vdGUucmVtb3ZlQ2xhc3MoXCJkLW5vbmVcIik7XG5cbiAgICAgICAgLy8gdG9nZ2xlXG4gICAgICAgICQodGhpcykudG9nZ2xlQ2xhc3MoXCJkLW5vbmVcIik7XG4gICAgICAgICQodGhpcykubmV4dCgpLnRvZ2dsZUNsYXNzKFwiZC1ub25lXCIpO1xuICAgIH0pO1xufVxuZnVuY3Rpb24gbGVzc01vcmUoKSB7XG4gICAgJChcIi5sZXNzTW9yZVwiKS5jbGljayhmdW5jdGlvbiAoKSB7XG4gICAgICAgIGxldCBub3RlID0gJCh0aGlzKS5wYXJlbnQoKS5maW5kKFwiLm5vdGVcIik7XG4gICAgICAgIGxldCBtb3JlTm90ZSA9ICQodGhpcykucGFyZW50KCkuZmluZChcIi5tb3JlTm90ZVwiKTtcbiAgICAgICAgbm90ZS5yZW1vdmVDbGFzcyhcImQtbm9uZVwiKTtcbiAgICAgICAgbW9yZU5vdGUuYWRkQ2xhc3MoXCJkLW5vbmVcIik7XG5cbiAgICAgICAgLy8gdG9nZ2xlXG4gICAgICAgICQodGhpcykudG9nZ2xlQ2xhc3MoXCJkLW5vbmVcIik7XG4gICAgICAgICQodGhpcykucHJldigpLnRvZ2dsZUNsYXNzKFwiZC1ub25lXCIpO1xuICAgIH0pO1xufVxuIl0sImZpbGUiOiIuL3Jlc291cmNlcy9qcy9vdGhlcnMvcmVjb21tZW5kYXRpb24uanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/others/recommendation.js\n");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./resources/js/others/recommendation.js"]();
+/******/ 	
+/******/ })()
+;

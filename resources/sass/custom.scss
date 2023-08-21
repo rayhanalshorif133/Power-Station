@@ -1,0 +1,42 @@
+// This is my custom css
+@import "colors";
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 1.28rem;
+    }
+}
+input[type="checkbox"],
+.form-select {
+    cursor: pointer !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.bg-red {
+    background-color: var($red) !important;
+}
+.bg-green {
+    background-color: var($green) !important;
+}
+.bg-yellow {
+    background-color: var($yellow) !important;
+}
+.bg-blue {
+    background-color: var($blue) !important;
+}
+.bg-orange {
+    background-color: var($orange) !important;
+}
+.bg-black {
+    background-color: var($black) !important;
+}
+
+.badge .showDeviceStatus {
+    font-size: 1rem !important;
+}
+.alert {
+    font-size: 14px !important;
+}

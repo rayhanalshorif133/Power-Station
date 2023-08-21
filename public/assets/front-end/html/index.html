@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <!-- navbar section   -->
+    <div class="relative shadow-md mb-1.5 bg-white">
+      <div class="side_space">
+        <div
+          class="flex items-center justify-between py-2 md:justify-start md:space-x-10"
+        >
+          <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#">
+              <span class="sr-only">Shahjibazar Power Co. Ltd.</span>
+              <img
+                class="h-8 w-auto sm:h-12"
+                src="./image/Shahjibazar-logo.png"
+                alt="Shahjibazar Power Co. Ltd."
+              />
+            </a>
+          </div>
+          <div class="-my-2 -mr-2 md:hidden">
+            <button
+              id="open_mobile_menu_button"
+              type="button"
+              class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open menu</span>
+              <!-- Heroicon name: outline/bars-3 -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav class="hidden space-x-6 md:flex items-center">
+            <a
+              href="/public"
+              class="text-base uppercase font-bold text-white rounded-md bg-primary px-2.5 py-1"
+              >HOME</a
+            >
+            <a
+              href="/public/department.html"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >DEPARTMENT</a
+            >
+            <a
+              href="/public/learning.html"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >LEARNING</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >NOTICE</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >ABOUT</a
+            >
+            <a
+              href="/public/contract.html"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >CONTACT</a
+            >
+            <div
+              class="text-base cursor-pointer text-white bg-black hover:bg-primary rounded-full h-8 w-8 flex justify-center items-center"
+            >
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--
+    Mobile menu, show/hide based on mobile menu state.
+
+    Entering: "duration-200 ease-out"
+      From: "opacity-0 scale-95"
+      To: "opacity-100 scale-100"
+    Leaving: "duration-100 ease-in"
+      From: "opacity-100 scale-100"
+      To: "opacity-0 scale-95"
+  -->
+      <div
+        id="mobile_menu"
+        class="absolute inset-x-0 top-0 origin-top-right transform p-2 transition hidden"
+      >
+        <div
+          class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+        >
+          <div class="px-5 pt-5 pb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <img
+                  class="h-8 w-auto"
+                  src="./image/Shahjibazar-logo.png"
+                  alt="Shahjibazar Power Co. Ltd."
+                />
+              </div>
+              <div class="-mr-2">
+                <button
+                  id="close_mobile_menu_button"
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x-mark -->
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="mt-6">
+              <nav class="grid gap-y-8">
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 text-white bg-primary"
+                >
+                  <span class="ml-3 text-base font-medium">HOME</span>
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >DEPARTMENT</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >LEARNING</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >NOTICE</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >ABOUT</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >CONTACT</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >MY PROFILE</span
+                  >
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Latest Notices -->
+    <div class="overflow-x-hidden bg-white">
+      <p
+        class="text-red-700 text-xs md:text-sm font-Roboto marquee-text min-w-max w-full my-1.5 md:my-2"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum et cum
+        facere pariatur officia magnam adipisci, praesentium velit eos officiis
+        modi nisi, debitis placeat perferendis consequatur temporibus quasi
+        repudiandae facilis.
+      </p>
+    </div>
+    <!-- Hero Section  -->
+    <section class="relative">
+      <img
+        src="./image/hero.png"
+        alt="hero image"
+        class="opacity-60 md:opacity-70 object-cover min-h-[50vh] md:min-h-min"
+      />
+      <div class="absolute top-32 md:top-10 left-2 md:left-6">
+        <h1
+          class="md:leading-normal text-xl sm:text-3xl md:text-5xl font-bold font-Roboto"
+        >
+          330 MW COMBINED CYCLE POWER PLANT,
+          <br />
+          SHAHAJIBAZAR, SYLHET
+        </h1>
+      </div>
+    </section>
+    <!-- <div
+      class="relative hero_image bg-[url(./image/hero.png)] w-full object-contain px-6 md:px-10 py-10 md:py-12 min-h-[80vh] bg-cover"
+    >
+      <h1 class="text-3xl md:text-5xl font-bold z-10">
+        330 MW COMBINED CYCLE POWER PLANT, <br />
+        SHAHAJIBAZAR, SYLHET
+      </h1>
+    </div> -->
+
+    <!-- image and card -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 flex flex-col md:flex-row gap-4 md:gap-8"
+    >
+      <div class="md:w-[45%] space-y-2">
+        <img src="./image/card1.png" alt="" />
+        <p class="mx-auto text-justify w-[80%] text-sm md:text-base">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur
+          vitae reprehenderit . Lorem ipsum dolor
+        </p>
+      </div>
+      <div class="md:w-[65%] space-y-2 md:space-y-3">
+        <h3 class="text-xl md:text-2xl font-bold">
+          About Shahjibazar Power Co. Ltd
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          doloribus velit et minus atque voluptas consequuntur iure at dolorem
+          ratione molestiae possimus nisi corporis quas, sunt ullam quis id
+          repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Adipisci veritatis culpa eos necessitatibus hic dicta, in facere ad
+          nobis. Nisi, vel debitis placeat voluptatem omnis quidem sed veritatis
+          exercitationem magni! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptatem doloribus velit et minus atque voluptas
+          consequuntur iure at dolorem ratione molestiae possimus nisi corporis
+          quas, sunt ullam quis id repellat. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Adipisci veritatis culpa eos
+          necessitatibus hic dicta, in facere ad nobis. Nisi, vel debitis
+          placeat voluptatem omnis quidem sed veritatis exercitationem magni!
+          exercitationem magni! Lorem ipsum dolor sit amet consectetur
+        </p>
+      </div>
+    </section>
+
+    <!-- head image card  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 hidden md:flex gap-8 pt-10"
+    >
+      <div class="relative">
+        <img src="./image/card2.png" alt="" />
+        <img
+          src="./image/head.png"
+          alt=""
+          class="w-[35%] absolute left-10 bottom-0"
+        />
+        <div class="absolute top-16 right-20 w-[40vw]">
+          <p class="text-white">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+            accusamus? Beatae dolores et iste, a eum quia, sed ipsa culpa
+            deleniti tempora doloribus? Sunt porro magni ab omnis ipsam neque"
+            accusamus? Beatae dolores et iste, a eum quia, sed ipsa culpa
+            deleniti tempora doloribus? Sunt porro magni ab omnis ipsam neque"
+          </p>
+        </div>
+        <div class="text-center absolute bottom-2 right-10">
+          <h3 class="text-white font-medium">Chairman name</h3>
+          <p class="text-white">Chairman Shahjibazar 330 MW Power Plant</p>
+        </div>
+      </div>
+    </section>
+    <!-- mobile section  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 flex flex-col md:flex-row gap-4 md:gap-8 md:hidden"
+    >
+      <img src="./image/head.png" alt="" class="w-[60%] mx-auto" />
+      <p class="text-justify">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ut maxime
+        dolorum suscipit inventore maiores possimus, sed enim nesciunt aperiam
+        culpa et voluptatibus dolor earum molestias neque ipsa voluptas
+        voluptate. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Deserunt quis, nulla minima quod reiciendis eos voluptatem odio dolore,
+        sapiente"
+      </p>
+      <div class="text-center">
+        <p class="font-medium">Chairman name</p>
+        <p class="">Chairman Shahjibazar 330 MW Power Plant</p>
+      </div>
+    </section>
+
+    <!-- notice - news section  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 space-y-2 md:space-y-3"
+    >
+      <div class="flex flex-col md:flex-row gap-2">
+        <!-- notice board -->
+        <div class="bg-white p-4 space-y-2 md:w-[60%] shadow-md">
+          <h1 class="text-lg font-semibold text-gray-500">Notice Board</h1>
+          <ul
+            class="ml-6 md:ml-12 text-xs md:text-sm space-y-2 md:space-y-3 list-disc"
+          >
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+          </ul>
+        </div>
+        <!-- Latest News -->
+        <div class="bg-white p-4 space-y-2 md:w-[40%] shadow-md">
+          <h1 class="text-lg font-semibold text-gray-500">Latest News</h1>
+          <ul
+            class="ml-6 md:ml-12 text-xs md:text-sm space-y-2 md:space-y-3 list-disc"
+          >
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+            <li class="text-primary">
+              This is the notice title publish on today
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-2">
+        <div class="bg-white p-4 w-full h-28 shadow-md"></div>
+        <div class="bg-white p-4 w-full h-28 shadow-md"></div>
+        <div class="bg-white p-4 w-full h-28 shadow-md"></div>
+      </div>
+    </section>
+
+    <!-- download our mobile app  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 space-y-2 md:space-y-3"
+    >
+      <div class="relative">
+        <img src="./image/app.png" alt="" class="hidden md:block" />
+        <div class="md:absolute top-14 lg:top-36 left-10 space-y-2 md:w-[40%]">
+          <h3 class="text-xl text-gray-600 font-medium">
+            Download Our Mobile App
+          </h3>
+          <p class="text-sm md:text-base font-semibold text-gray-400">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+            perferendis, unde aspernatur est, cum velit ea possimus maiores
+            placeat magnam inventore rem totam dignissimos voluptate iste quia
+            praesentium. Iste, nesciunt!
+          </p>
+          <div class="flex gap-4 pt-2 md:pt-0">
+            <button
+              class="px-4 py-1 pb-1.5 bg-primary text-white rounded-md font-semibold"
+            >
+              Google Play
+            </button>
+            <button
+              class="px-4 py-1 pb-1.5 bg-primary text-white rounded-md font-semibold"
+            >
+              IOS Store
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Events  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 space-y-2 md:space-y-3"
+    >
+      <h1
+        class="text-xl md:text-2xl text-gray-500 font-bold text-center mb-6 md:mb-8"
+      >
+        All Events
+      </h1>
+      <div class="flex flex-col my-24" data-controller="slider">
+        <div
+          class="flex overflow-x-scroll"
+          data-slider-target="scrollContainer"
+        >
+          <div
+            class="w-auto h-40 px-4 flex-shrink-0"
+            data-slider-target="image"
+            id="1"
+          >
+            <img
+              class="h-full"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            />
+          </div>
+          <div
+            class="w-auto h-40 px-4 flex-shrink-0"
+            data-slider-target="image"
+            id="1"
+          >
+            <img
+              class="h-full"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            />
+          </div>
+          <div
+            class="w-auto h-40 px-4 flex-shrink-0"
+            data-slider-target="image"
+            id="1"
+          >
+            <img
+              class="h-full"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            />
+          </div>
+          <div
+            class="w-auto h-40 px-4 flex-shrink-0"
+            data-slider-target="image"
+            id="1"
+          >
+            <img
+              class="h-full"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            />
+          </div>
+          <div
+            class="w-auto h-40 px-4 flex-shrink-0"
+            data-slider-target="image"
+            id="1"
+          >
+            <img
+              class="h-full"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            />
+          </div>
+          <div
+            class="w-auto h-40 px-4 flex-shrink-0"
+            data-slider-target="image"
+            id="1"
+          >
+            <img
+              class="h-full"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 space-y-2 md:space-y-3"
+    >
+      <h1 class="text-xl md:text-2xl text-gray-500 font-bold text-center">
+        Gallery
+      </h1>
+      <div class="flex justify-center gap-2 py-4">
+        <button
+          class="px-3 py-0.5 font-medium text-primary border-primary border rounded-md"
+        >
+          All
+        </button>
+        <button
+          class="px-3 py-0.5 font-medium text-primary border-primary border rounded-md"
+        >
+          Plant
+        </button>
+        <button
+          class="px-3 py-0.5 font-medium text-primary border-primary border rounded-md"
+        >
+          BPDB
+        </button>
+        <button
+          class="px-3 py-0.5 font-medium text-primary border-primary border rounded-md"
+        >
+          330
+        </button>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block object-cover object-center w-full h-full rounded-lg"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 my-8 md:my-12 space-y-2 md:space-y-3"
+    >
+      <footer class="p-4 bg-white sm:p-6 md:pt-12 md:p-8">
+        <div class="md:flex gap-6 md:gap-12">
+          <div class="mb-6 md:mb-0 md:w-[20vw] space-y-4 md:space-y-5">
+            <a
+              href="/"
+              class="flex items-center justify-center md:justify-start"
+            >
+              <img
+                src="./image/Shahjibazar-logo.png"
+                class="mr-3 h-12 md:h-20"
+                alt="Shahjibazar Power Co. Ltd"
+              />
+            </a>
+            <p class="text-xs md:text-sm">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+              fugit, porro eaque, enim placeat ipsum a laudantium architecto
+            </p>
+            <div class="space-y-2 text-sm md:text-base">
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text-gray-500">N2, Shahjibazar</p>
+              </div>
+              <div class="flex gap-2 items-center text-gray-500">
+                <i class="fa-sharp fa-solid fa-phone"></i>
+                <p>01709-641889</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <i class="fa-sharp fa-solid fa-envelope"></i>
+                <p class="text-gray-500">name@email.com</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full grid grid-cols-2 gap-8 sm:gap-6 md:gap-20 sm:grid-cols-3"
+          >
+            <div>
+              <h2
+                class="mb-6 text-lg md:text-xl font-semibold text-gray-700 border-b-4 text-center pb-2 max-w-[200px]"
+              >
+                Devices
+              </h2>
+
+              <ul class="text-gray-600 list-disc ml-4">
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-lg md:text-xl font-semibold text-gray-700 border-b-4 text-center pb-2 max-w-[200px]"
+              >
+                Useful Links
+              </h2>
+
+              <ul class="text-gray-600 list-disc ml-4">
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-lg md:text-xl font-semibold text-gray-700 border-b-4 text-center pb-2 max-w-[200px]"
+              >
+                Hotline
+              </h2>
+
+              <ul class="-mt-2">
+                <img src="./image/hotline.png" alt="hotline" class="w-[70%]" />
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap text-xs md:text-sm justify-center gap-4 mt-4 md:mt-6"
+        >
+          <p class="text-gray-500">
+            Site was last updated 22 JUL 2021 05:30:44
+          </p>
+          <p class="text-primary">Contract & Feedback</p>
+          <p class="text-primary">Download Mobile App</p>
+        </div>
+        <hr class="my-4 md:my-6 border-gray-700 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-center">
+          <p class="text-sm md:text-base text-gray-700 text-center">
+            Copyright © 2022 Website Develop & Maintains by
+            <a href="" class="hover:underline text-primary font-bold"
+              >TEXON Ltd
+            </a>
+          </p>
+        </div>
+      </footer>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>

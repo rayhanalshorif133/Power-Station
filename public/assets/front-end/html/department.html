@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Department</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <!-- navbar section   -->
+    <div class="relative shadow-md mb-3 md:mb-6 bg-white">
+      <div class="side_space">
+        <div
+          class="flex items-center justify-between py-2 md:justify-start md:space-x-10"
+        >
+          <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#">
+              <span class="sr-only">Shahjibazar Power Co. Ltd.</span>
+              <img
+                class="h-8 w-auto sm:h-12"
+                src="./image/Shahjibazar-logo.png"
+                alt="Shahjibazar Power Co. Ltd."
+              />
+            </a>
+          </div>
+          <div class="-my-2 -mr-2 md:hidden">
+            <button
+              id="open_mobile_menu_button"
+              type="button"
+              class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open menu</span>
+              <!-- Heroicon name: outline/bars-3 -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav class="hidden space-x-6 md:flex items-center">
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >HOME</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-white rounded-md bg-primary px-2.5 py-1"
+              >DEPARTMENT</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >LEARNING</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >NOTICE</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >ABOUT</a
+            >
+            <a
+              href="#"
+              class="text-base uppercase font-bold text-gray-900 border-b-4 border-transparent hover:border-primary"
+              >CONTACT</a
+            >
+            <div
+              class="text-base cursor-pointer text-white bg-black hover:bg-primary rounded-full h-8 w-8 flex justify-center items-center"
+            >
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--
+    Mobile menu, show/hide based on mobile menu state.
+
+    Entering: "duration-200 ease-out"
+      From: "opacity-0 scale-95"
+      To: "opacity-100 scale-100"
+    Leaving: "duration-100 ease-in"
+      From: "opacity-100 scale-100"
+      To: "opacity-0 scale-95"
+  -->
+      <div
+        id="mobile_menu"
+        class="absolute inset-x-0 top-0 origin-top-right transform p-2 transition hidden"
+      >
+        <div
+          class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+        >
+          <div class="px-5 pt-5 pb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <img
+                  class="h-8 w-auto"
+                  src="./image/Shahjibazar-logo.png"
+                  alt="Shahjibazar Power Co. Ltd."
+                />
+              </div>
+              <div class="-mr-2">
+                <button
+                  id="close_mobile_menu_button"
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x-mark -->
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="mt-6">
+              <nav class="grid gap-y-8">
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >HOME</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 text-white bg-primary"
+                >
+                  <span class="ml-3 text-base font-medium">DEPARTMENT</span>
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium">LEARNING</span>
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >NOTICE</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >ABOUT</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >CONTACT</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                >
+                  <span class="ml-3 text-base font-medium text-gray-900"
+                    >MY PROFILE</span
+                  >
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- title  -->
+    <div class="bg-primary py-2 md:py-4">
+      <div class="side_space">
+        <p class="text-white font-semibold text-base md:text-xl">
+          Home/Department
+        </p>
+      </div>
+    </div>
+    <!-- top department navigation -->
+    <section
+      class="side_space flex items-center lg:justify-center py-2.5 md:pt-3 text-base md:text-lg text-gray-500 divide-x-2 divide-gray-400 overflow-x-scroll lg:overflow-x-hidden"
+    >
+      <div class="flex-shrink-0">
+        <p class="text-primary pb-0.5 border-r-2 px-3 md:px-6">
+          Department Name
+        </p>
+        <hr class="mx-auto w-24 border-2 bg-primary border-primary" />
+      </div>
+      <div class="flex-shrink-0">
+        <p class="pb-0.5 border-r-2 px-3 md:px-6">Department Name</p>
+        <hr class="mx-auto w-24 border-2 border-transparent" />
+      </div>
+      <div class="flex-shrink-0">
+        <p class="pb-0.5 border-r-2 px-3 md:px-6">Department Name</p>
+        <hr class="mx-auto w-24 border-2 border-transparent" />
+      </div>
+      <div class="flex-shrink-0">
+        <p class="pb-0.5 border-r-2 px-3 md:px-6">Department Name</p>
+        <hr class="mx-auto w-24 border-2 border-transparent" />
+      </div>
+      <div class="flex-shrink-0">
+        <p class="pb-0.5 border-r-2 px-3 md:px-6 border-transparent">
+          Department Name
+        </p>
+        <hr class="mx-auto w-24 border-2 border-transparent" />
+      </div>
+    </section>
+    <h1
+      class="text-primary text-xl md:text-2xl font-semibold text-center my-4 md:my-10"
+    >
+      Department of Name of Deparment
+    </h1>
+    <section class="side_space flex flex-col sm:flex-row gap-4 md:gap-6">
+      <!-- side menu  -->
+      <aside
+        class="sm:max-w-xs w-full bg-white rounded-md py-6 px-4 space-y-2 md:space-y-4 self-baseline"
+      >
+        <!-- side menu links -->
+        <div class="flex flex-col flex-grow overflow-y-auto">
+          <div class="flex-grow flex flex-col">
+            <nav
+              class="flex-1 px-2 space-y-1 text-sm md:text-base divide-y-2 divide-gray-300 font-medium"
+              aria-label="Sidebar"
+            >
+              <div>
+                <a
+                  href="#"
+                  class="text-primary group w-full flex items-center pl-0.5 py-2"
+                >
+                  Dashboard
+                </a>
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="text-gray-900 group w-full flex items-center pl-0.5 py-2"
+                >
+                  Message from Head
+                </a>
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="text-gray-900 group w-full flex items-center pl-0.5 py-2"
+                >
+                  Officers
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </aside>
+
+      <!-- blog cards -->
+      <div class="w-full space-y-6 md:space-y-10">
+        <!-- blog card  -->
+        <div class="space-y-1 md:space-y-2">
+          <h3 class="text-lg md:text-xl font-semibold">
+            The Standard lorem ipsum passage
+          </h3>
+          <p class="text-sm md:text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            corporis repellat laudantium a dolorum veniam iusto sit excepturi?
+            Repellendus asperiores vero ad consectetur possimus! Similique ad
+            laboriosam illum non labore. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Incidunt aliquid, repellendus expedita at voluptas
+            veniam ipsam dolores repudiandae deserunt nobis! Necessitatibus
+            voluptates quibusdam mollitia laudantium perferendis, eaque ipsum
+            totam odio!
+          </p>
+        </div>
+        <div class="space-y-1 md:space-y-2">
+          <h3 class="text-lg md:text-xl font-semibold">
+            The Standard lorem ipsum passage
+          </h3>
+          <p class="text-sm md:text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            corporis repellat laudantium a dolorum veniam iusto sit excepturi?
+            Repellendus asperiores vero ad consectetur possimus! Similique ad
+            laboriosam illum non labore. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Incidunt aliquid, repellendus expedita at voluptas
+            veniam ipsam dolores repudiandae deserunt nobis! Necessitatibus
+            voluptates quibusdam mollitia laudantium perferendis, eaque ipsum
+            totam odio!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- footer  -->
+    <section class="side_space my-8 md:my-12 space-y-2 md:space-y-3">
+      <footer class="p-4 bg-white sm:p-6 md:pt-12 md:p-8">
+        <div class="md:flex gap-6 md:gap-12">
+          <div class="mb-6 md:mb-0 md:w-[20vw] space-y-4 md:space-y-5">
+            <a
+              href="/"
+              class="flex items-center justify-center md:justify-start"
+            >
+              <img
+                src="./image/Shahjibazar-logo.png"
+                class="mr-3 h-12 md:h-20"
+                alt="Shahjibazar Power Co. Ltd"
+              />
+            </a>
+            <p class="text-xs md:text-sm">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+              fugit, porro eaque, enim placeat ipsum a laudantium architecto
+            </p>
+            <div class="space-y-2 text-sm md:text-base">
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text-gray-500">N2, Shahjibazar</p>
+              </div>
+              <div class="flex gap-2 items-center text-gray-500">
+                <i class="fa-sharp fa-solid fa-phone"></i>
+                <p>01709-641889</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <i class="fa-sharp fa-solid fa-envelope"></i>
+                <p class="text-gray-500">name@email.com</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full grid grid-cols-2 gap-8 sm:gap-6 md:gap-20 sm:grid-cols-3"
+          >
+            <div>
+              <h2
+                class="mb-6 text-lg md:text-xl font-semibold text-gray-700 border-b-4 text-center pb-2 max-w-[200px]"
+              >
+                Devices
+              </h2>
+
+              <ul class="text-gray-600 list-disc ml-4">
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-lg md:text-xl font-semibold text-gray-700 border-b-4 text-center pb-2 max-w-[200px]"
+              >
+                Useful Links
+              </h2>
+
+              <ul class="text-gray-600 list-disc ml-4">
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+                <li class="mb-4">
+                  <a href="" class="hover:underline">Device name one</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-lg md:text-xl font-semibold text-gray-700 border-b-4 text-center pb-2 max-w-[200px]"
+              >
+                Hotline
+              </h2>
+
+              <ul class="-mt-2">
+                <img src="./image/hotline.png" alt="hotline" class="w-[70%]" />
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap text-xs md:text-sm justify-center gap-4 mt-4 md:mt-6"
+        >
+          <p class="text-gray-500">
+            Site was last updated 22 JUL 2021 05:30:44
+          </p>
+          <p class="text-primary">Contract & Feedback</p>
+          <p class="text-primary">Download Mobile App</p>
+        </div>
+        <hr class="my-4 md:my-6 border-gray-700 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-center">
+          <p class="text-sm md:text-base text-gray-700 text-center">
+            Copyright © 2022 Website Develop & Maintains by
+            <a href="" class="hover:underline text-primary font-bold"
+              >TEXON Ltd
+            </a>
+          </p>
+        </div>
+      </footer>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>

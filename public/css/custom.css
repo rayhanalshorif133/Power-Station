@@ -1,0 +1,63 @@
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 1.28rem;
+    }
+}
+input[type="checkbox"],
+.form-select {
+    cursor: pointer !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bg-red {
+    background-color: #f6051d !important;
+}
+
+.bg-green {
+    background-color: #108d2d !important;
+}
+
+.bg-yellow {
+    background-color: #ffc107 !important;
+}
+
+.bg-blue {
+    background-color: #2803f8 !important;
+}
+
+.bg-orange {
+    background-color: #ff5722 !important;
+}
+
+.bg-black {
+    background-color: #000000 !important;
+}
+
+.badge .showDeviceStatus {
+    font-size: 1rem !important;
+}
+
+.alert {
+    font-size: 14px !important;
+} 
+
+.required::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+
+.optional::after {
+    content: " (optional)";
+    color: #999;
+    font-weight: normal;
+}
+.cursor-pointer{
+    cursor: pointer!important;
+}
+
