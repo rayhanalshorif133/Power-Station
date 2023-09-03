@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Spatie\Permission\PermissionRegistrar;
@@ -26,8 +24,6 @@ class RolesAndPermissionsSeeder extends Seeder
         $deputyManager = Role::create(['name' => 'deputy-manager']);
         $operationUser = Role::create(['name' => 'operation-user']); 
         $normal_user = Role::create(['name' => 'user']);
-        // sob issue
-        // dekte parbe but acccept korte parbena sudu take je gula assing kora ba se shift e thakle korte parbe
 
 
         $user = User::factory()->create([
